@@ -1,0 +1,126 @@
+@use '../../scss/abstracts/' as *;
+
+.user {
+    &__item:last-child {
+        border-bottom: 2px solid $mainColor;
+    }
+
+    &__header, &__item {
+        display: flex;
+    }
+
+    &__header {
+        background-color: $mainColor;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        align-items: center;
+        text-align: left;
+        font-weight: 700;
+        font-size: $fontSizeMedium;
+
+        > * {
+            padding: 10px;
+
+            &:nth-child(1) {
+                width: 6rem;
+            }
+    
+            &:nth-child(2) {
+                width: 5rem;
+            }
+    
+            &:nth-child(3) {
+                width: 8rem;
+            }
+
+            &:nth-child(4) {
+                width: 15rem;
+            }
+
+            &:nth-child(5) {
+                width: 20rem;
+            }
+
+            &:nth-child(6) {
+                width: 25rem;
+            }
+
+            &:nth-child(7) {
+                width: 18rem;
+            }
+        }
+    }
+
+    &__item {
+        &:nth-of-type(even) {
+            background-color: #f2f2f2;
+        }
+        border-bottom: 1px solid rgb(210, 210, 210);
+        background-color: $mainBg;
+        height: 55px;
+        align-items: center;
+        
+        span {
+            padding: 10px;
+            overflow-x: scroll;
+            
+            &:nth-child(1) {
+                width: 6rem;
+            }
+    
+            &:nth-child(2) {
+                width: 5rem;
+            }
+    
+            &:nth-child(3) {
+                width: 8rem;
+            }
+
+            &:nth-child(4) {
+                width: 15rem;
+                text-align: left;
+            }
+
+            &:nth-child(5) {
+                width: 20rem;
+            }
+
+            &:nth-child(6) {
+                width: 25rem;
+            }
+        }
+
+        img {
+            --size: 40px;
+            width: var(--size);
+            height: var(--size);
+            object-fit: cover;
+            margin: 0;
+        }
+
+        &__action{
+            display: flex;
+            // margin-left: auto;
+            width: 18rem;
+
+            > * {
+                border-radius: 10px;
+                padding: 5px 10px;
+                color: white;
+                font-weight: 500;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+            :nth-child(1) {
+                background-color: green;
+            }
+
+            :nth-child(2) {
+                background-color: red;
+            }
+        }
+    }
+
+}

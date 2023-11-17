@@ -1,0 +1,72 @@
+@use './abstracts/' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $fontFamily;
+    color: $txtColor;
+    font-size: $fontSizeNormal;
+    line-height: 1.5;
+    background-color: $bodyBg;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+img {
+    width: 100%;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.mb {
+    margin-bottom: $spacing;
+
+    @include tablet {
+        margin-bottom: $mobileSpacing;
+    }
+}
+
+.title {
+    font-size: $fontSizeNormal;
+    font-weight: 700;
+}
+
+.txt-success {
+    color: #4eb439;
+}
+
+.txt-danger {
+    color: #d30000;
+}
+
+body {
+    overflow: hidden; /* Hide scrollbars */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
